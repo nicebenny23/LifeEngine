@@ -249,8 +249,12 @@ class ControlPanel {
         $('#food-prod-prob').change(function() {
             Hyperparams.foodProdProb = $('#food-prod-prob').val();
         }.bind(this));
-        $('#lifespan-multiplier').change(function() {
-            Hyperparams.lifespanMultiplier = $('#lifespan-multiplier').val();
+        $('#lifespan-Multiplier').change(function() {
+            Hyperparams.lifespanMultiplier = $('#lifespan-Multiplier').val();
+        }.bind(this));
+
+        $('#Multi').change(function() {
+            Hyperparams.Multi = $('#Multi').val();
         }.bind(this));
 
         $('#rot-enabled').change(function() {
@@ -341,6 +345,7 @@ class ControlPanel {
     updateHyperparamUIValues(){
         $('#food-prod-prob').val(Hyperparams.foodProdProb);
         $('#lifespan-multiplier').val(Hyperparams.lifespanMultiplier);
+        $('#Multi').val(hyperparams.Multi);
         $('#rot-enabled').prop('checked', Hyperparams.rotationEnabled);
         $('#insta-kill').prop('checked', Hyperparams.instaKill);
         $('#evolved-mutation').prop('checked', !Hyperparams.useGlobalMutability);

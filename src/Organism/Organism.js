@@ -45,11 +45,11 @@ class Organism {
 
     // amount of food required before it can reproduce
     foodNeeded() {
-        return this.anatomy.is_mover ? this.anatomy.cells.length + Hyperparams.extraMoverFoodCost : this.anatomy.cells.length;
+        return Math.round(Hyperparams.Multi*(this.anatomy.is_mover ? this.anatomy.cells.length + Hyperparams.extraMoverFoodCost : this.anatomy.cells.length));
     }
-
+ 
     lifespan() {
-        return this.anatomy.cells.length * Hyperparams.lifespanMultiplier;
+   //     return this.anatomy.cells.length * Hyperparams.lifespanMultiplier;
     }
 
     maxHealth() {
